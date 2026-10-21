@@ -1,0 +1,113 @@
+/* Mustafa Doruk Yılmaz — 2416501038 */
+
+:root {
+  --no: 2416501038;
+  --ton: mod(var(--no), 30);
+  --renk-ana: hsl(var(--ton) 85% 18%);
+  --renk-zemin: white;
+  --font: system-ui;
+  --bosluk-m: 1rem;  --kose: 8px;
+}
+body { font-family: var(--font); margin: 0; background: var(--renk-zemin); }
+
+header, nav {
+  background-color: var(--renk-ana);
+  color: white;
+  padding: 0 var(--bosluk-m);
+}
+
+header { padding-top: var(--bosluk-m); }
+nav { padding-bottom: var(--bosluk-m); }
+nav a { color: white; margin-right: var(--bosluk-m); }
+
+main { padding: var(--bosluk-m); }
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--renk-ana); font-weight: bold; }
+
+.etkinlikler, .detay {
+  display: grid;
+  gap: var(--bosluk-m);
+}
+
+.etkinlikler article, .detay dl {
+  background: white;
+  border: 5px solid #ddd;
+  border-radius: var(--kose);
+  padding: var(--bosluk-m);
+}
+
+@media (min-width: 700px) {
+  .etkinlikler { grid-template-columns: 1fr 1fr 1fr; }
+  .detay { grid-template-columns: 1fr 1fr; }
+}
+
+/* Form */
+label { display: block; }
+
+input, select, textarea, button {
+  font: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: var(--kose);
+}
+
+button {
+  background: var(--renk-ana);
+  color: white;
+  border: none;
+}
+
+/* Sprint 3 */
+header { padding-bottom: 1px; } /* h1/p margin'i header dışına taşmasın */
+footer { text-align: center; padding: var(--bosluk-m); color: gray; }
+
+.buton {
+  display: inline-block;
+  background: var(--renk-ana);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--kose);
+  text-decoration: none;
+  margin: 0.25rem 0;
+}
+
+.filtre {
+  display: grid;
+  gap: var(--bosluk-m);
+  border: 1px solid #ddd;
+  border-radius: var(--kose);
+  padding: var(--bosluk-m);
+}
+
+@media (min-width: 700px) {
+  .filtre { grid-template-columns: 2fr 1fr; }
+}
+
+#sonuc { color: green; font-weight: bold; }
+
+.hata-metni { color: red; font-size: 0.85rem; }
+
+[aria-invalid="true"] {
+  border: 2px solid red;
+  background: #fff0f0;
+}
+
+.hata-kutusu {
+  color: #b00020;
+  background: #fff0f0;
+  border: 1px solid red;
+  border-radius: var(--kose);
+  padding: var(--bosluk-m);
+}
+
+.basari {
+  color: green;
+  border: 1px solid green;
+  border-radius: var(--kose);
+  padding: var(--bosluk-m);
+}
+
+.basari pre { color: black; white-space: pre-wrap; }
